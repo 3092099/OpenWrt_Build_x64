@@ -43,7 +43,7 @@ env:
   UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: OpenWrt_Build_2305_x64_temp
+  FILE_NAME: OpenWrt_2305_x64_temp
   PRODUCT_NAME: x86-64
 
 jobs:
