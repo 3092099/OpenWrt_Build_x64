@@ -54,7 +54,7 @@ sed -i 's/OpenWrt/OpenWrt-GXNAS/g' package/base-files/files/bin/config_generate
 echo "默认的zzz-default-settings配置文件内容为："
 cat package/lean/default-settings/files/zzz-default-settings
 echo "修改版本号后的zzz-default-settings配置文件内容为："
-sed -i "s/DISTRIB_DESCRIPTION='LEDE '/DISTRIB_DESCRIPTION='OpenWrt_1806_x64_旁路由版 by GXNAS build '/g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/DISTRIB_DESCRIPTION='LEDE '/DISTRIB_DESCRIPTION='版本号：OpenWrt_1806_x64_旁路由版 by GXNAS build '/g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/DISTRIB_REVISION='R24.10.24'/DISTRIB_REVISION='@R$(date +%y.%m.%d)'/g" package/lean/default-settings/files/zzz-default-settings
 cat package/lean/default-settings/files/zzz-default-settings
 
@@ -62,6 +62,8 @@ cat package/lean/default-settings/files/zzz-default-settings
 cp -f $GITHUB_WORKSPACE/personal/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 修改主题多余版本信息
+rm -rf  package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 echo "默认的footer.htm配置文件内容为："
 cat package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
 sed -i 's|<a class="luci-link" href="https://github.com/openwrt/luci"|<a|g' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
@@ -74,7 +76,7 @@ cat package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
 echo "默认的index.htm配置文件内容为："
 cat package/lean/autocore/files/x86/index.htm
 echo "增加显示编译时间后的index.htm配置文件内容为："
-sed -i "s/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/OpenWrt_1806_x64_旁路由版 by GXNAS build @R$(date +%y.%m.%d)/g" package/lean/autocore/files/x86/index.htm
+sed -i "s/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/编译时间：OpenWrt_1806_x64_旁路由版 by GXNAS build @R$(date +%y.%m.%d)/g" package/lean/autocore/files/x86/index.htm
 cat package/lean/autocore/files/x86/index.htm
 
 # 修改概览里时间显示为中文数字
