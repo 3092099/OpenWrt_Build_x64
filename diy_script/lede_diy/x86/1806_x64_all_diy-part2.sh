@@ -33,7 +33,11 @@ sed -i 's/OpenWrt/OpenWrt-GXNAS/g' package/base-files/files/bin/config_generate
 
 # 修改版本号
 # sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
+echo "默认的zzz-default-settings配置文件内容为："
+cat package/lean/default-settings/files/zzz-default-settings
+echo "修改版本号后的zzz-default-settings配置文件内容为："
 sed -i "s|DISTRIB_REVISION='LEDE*'|DISTRIB_REVISION='OpenWrt_1806_x64_全功能版 by GXNAS build @R$(date +%y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
+cat package/lean/default-settings/files/zzz-default-settings
 
 # 设置ttyd免帐号登录
 sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
@@ -171,7 +175,11 @@ sed -i 's|<a href="https://github.com/jerrykuku/luci-theme-argon" target="_blank
 sed -i 's/<a href=\"https:\/\/github.com\/coolsnowwolf\/luci\">/<a>/g' feeds/luci/themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/footer.htm
 
 # 显示增加编译时间
+echo "默认的index.htm配置文件内容为："
+cat package/lean/autocore/files/x86/index.htm
+echo "显示增加编译时间后的index.htm配置文件内容为："
 sed -i "s/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/OpenWrt_1806_x64_全功能版 by GXNAS build @R$(date +%y.%m.%d)/g" package/lean/autocore/files/x86/index.htm
+cat package/lean/autocore/files/x86/index.htm
 
 # 修改概览里时间显示为中文数字
 sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")/g' package/lean/autocore/files/x86/index.htm
