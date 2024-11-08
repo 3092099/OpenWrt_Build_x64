@@ -64,7 +64,9 @@ sed -i 's/OpenWrt/OpenWrt-GXNAS/g' package/base-files/files/bin/config_generate
 echo "默认的zzz-default-settings配置文件内容为："
 cat package/lean/default-settings/files/zzz-default-settings
 echo "修改版本号后的zzz-default-settings配置文件内容为："
-sed -i "s|DISTRIB_REVISION='LEDE*'|DISTRIB_REVISION='OpenWrt_1806_x64_旁路由版 by GXNAS build @R$(date +%y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s|DISTRIB_REVISION='LEDE*'|DISTRIB_REVISION='OpenWrt_1806_x64_旁路由版 by GXNAS build @R$(date +%y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/DISTRIB_DESCRIPTION='LEDE '/DISTRIB_DESCRIPTION='OpenWrt_1806_x64_旁路由版 by GXNAS build '/g" package/lean/default-settings/files/zzz-default-settings
+sed -i "DISTRIB_REVISION='R24.10.24'/DISTRIB_DESCRIPTION='@R$(date +%y.%m.%d)'/g" package/lean/default-settings/files/zzz-default-settings
 cat package/lean/default-settings/files/zzz-default-settings
 
 # 设置ttyd免帐号登录
