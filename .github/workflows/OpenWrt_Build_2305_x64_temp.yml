@@ -337,9 +337,9 @@ jobs:
       uses: ncipollo/release-action@v1
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success'
       with:
-        name: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        name: OpenWrt_2305_x64_temp
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        tag: OpenWrt_2305_x64_temp
         token: ${{ secrets.GH_TOKEN }}
         body: |
           ### 📒 固件信息
@@ -383,7 +383,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 
     - name: Push notification upload success
       uses: xhnmt/pushplus-action@main
@@ -402,7 +402,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 # /////////////////////////////////////////////////////////////////////////////////////////////////////////
   Build_2305_x64_temp_515:
     needs: [CheckRepo]
@@ -652,9 +652,9 @@ jobs:
       uses: ncipollo/release-action@v1
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success'
       with:
-        name: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        name: OpenWrt_2305_x64_temp
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        tag: OpenWrt_2305_x64_temp
         token: ${{ secrets.GH_TOKEN }}
         body: |
           ### 📒 固件信息
@@ -698,7 +698,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 
     - name: Push notification upload success
       uses: xhnmt/pushplus-action@main
@@ -717,7 +717,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 # /////////////////////////////////////////////////////////////////////////////////////////////////////////
   Build_2305_x64_temp_61X:
     needs: [CheckRepo]
@@ -969,9 +969,9 @@ jobs:
       uses: ncipollo/release-action@v1
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success'
       with:
-        name: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        name: OpenWrt_2305_x64_temp
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        tag: OpenWrt_2305_x64_temp
         token: ${{ secrets.GH_TOKEN }}
         body: |
           ### 📒 固件信息
@@ -1015,7 +1015,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 
     - name: Push notification upload success
       uses: xhnmt/pushplus-action@main
@@ -1034,7 +1034,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 # //////////////////////////////////////////////////////////////////////////////////////////////
   Build_2305_x64_temp_66X:
     needs: [CheckRepo]
@@ -1284,9 +1284,9 @@ jobs:
       uses: ncipollo/release-action@v1
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success'
       with:
-        name: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        name: OpenWrt_2305_x64_temp
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}-${{ env.KERNEL }}
+        tag: OpenWrt_2305_x64_temp
         token: ${{ secrets.GH_TOKEN }}
         body: |
           ### 📒 固件信息
@@ -1330,7 +1330,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
 
     - name: Push notification upload success
       uses: xhnmt/pushplus-action@main
@@ -1349,4 +1349,4 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}-${{ env.KERNEL }}
+          https://github.com/3092099/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_temp
