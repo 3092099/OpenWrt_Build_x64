@@ -8,7 +8,9 @@
 
 # Add a feed source
 sed -i "/helloworld/d" feeds.conf.default
-sed -i '$a src-git Jejz https://github.com/Jejz168/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git Jejz https://github.com/Jejz168/openwrt-packages' feeds.conf.default
+sed -i '$a src-git kenzok8 https://github.com/kenzok8/small-package' feeds.conf.default
+#rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 mkdir wget
 cat>rename.sh<<-\EOF
 
